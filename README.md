@@ -23,12 +23,6 @@ A Python/Flask application that helps you manage your Steam library with ease. I
 
 ---
 
-## Screenshots
-
-_Add screenshots here to showcase the UI._
-
----
-
 ## Prerequisites
 
 ### 1. Python 3.11+  
