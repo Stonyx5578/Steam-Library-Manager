@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Steam Library Manager</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+
+    <h1>Steam Library Manager</h1>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <label for="filter">Filter:</label>
+        <select id="filter"></select>
+        <button id="reset-options">Reset Skipped</button>
+    </div>
+
+    <!-- Manual Add Section -->
+    <div class="manual-section">
+        <input type="text" id="search-appid" placeholder="Enter Steam AppID">
+        <button id="check-appid">Fetch Game</button>
+
+        <div id="manual-form" class="manual-form" style="display:none;">
+            <input type="text" id="manual-name" placeholder="Game Name">
+            <input type="text" id="manual-cover" placeholder="Cover URL">
+            <input type="text" id="manual-store" placeholder="Steam Store URL">
+            <label>
+                <input type="checkbox" id="manual-installed"> Installed
+            </label>
+            <button id="manual-add-btn">Add Game</button>
+        </div>
+    </div>
+
+    <!-- Game Display -->
+    <div class="game-display">
+        <img id="game-cover" src="" alt="Game Cover">
+        <h2 id="game-name"></h2>
+        <p id="game-hours"></p>
+        <p id="game-status"></p>
+        <a id="game-store" href="#" target="_blank">View on Steam</a>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="buttons">
+        <button id="keep">Skip / Keep</button>
+        <button id="install">Install</button>
+        <button id="remove">Uninstall</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
